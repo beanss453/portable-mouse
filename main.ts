@@ -5,6 +5,12 @@ namespace SpriteKind {
 let mouseme_1: Sprite = null
 let mouseme_1anchor: Sprite = null
 let blocker = false
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    MouseMe(img`
+        3 3 
+        3 3 
+        `, true)
+})
 function MouseMe (cusor: Image, shop: boolean) {
     mouseme_1 = sprites.create(cusor, SpriteKind.cursor)
     controller.moveSprite(mouseme_1)
